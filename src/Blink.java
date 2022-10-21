@@ -45,7 +45,7 @@ public class Blink {
     }
 
     public static void main(String[] args) {
-        LEDClient ledClient = new LEDClient("tcp", "192.168.86.250", 5001);
+        LEDClient blink = new LEDClient("tcp", "192.168.86.250", 5001);
         try {
             int[] blue = {51,204,255};
             int[] red = {255, 0 , 0};
@@ -56,20 +56,20 @@ public class Blink {
             int[] grey = {153, 153, 153};
             int[] brown = {102, 51, 0};
 
-            ledClient.blinkN(blue, 1, 1000);
-            ledClient.blinkN(red, 2, 500);
-            ledClient.blinkN(yellow, 3, 250);
-            ledClient.blinkN(green, 4, 125);
-            ledClient.blinkN(yellow, 5, 120);
-            ledClient.blinkN(red, 6, 115);
-            ledClient.blinkN(blue, 7, 110);
+            blink.blinkN(blue, 1, 1000);
+            blink.blinkN(red, 2, 500);
+            blink.blinkN(yellow, 3, 250);
+            blink.blinkN(green, 4, 125);
+            blink.blinkN(yellow, 5, 120);
+            blink.blinkN(red, 6, 115);
+            blink.blinkN(blue, 7, 110);
 
-            ledClient.blinkN(brown, 8, 100);
-            ledClient.blinkN(purple, 9, 90);
-            ledClient.blinkN(orange, 10, 80);
-            ledClient.blinkN(grey, 11, 70);
+            blink.blinkN(brown, 8, 100);
+            blink.blinkN(purple, 9, 90);
+            blink.blinkN(orange, 10, 80);
+            blink.blinkN(grey, 11, 70);
 
-            ledClient.close();
+            blink.close();
         } catch (InterruptedException e) {
             throw new RuntimeException(e);
         }
