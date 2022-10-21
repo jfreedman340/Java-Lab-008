@@ -47,6 +47,7 @@ public class Blink {
     public static void main(String[] args) {
         LEDClient blink = new LEDClient("tcp", "192.168.86.250", 5001);
         try {
+            //My program for blinking LED lights
             int[] blue = {51,204,255};
             int[] red = {255, 0 , 0};
             int[] yellow = {255, 204, 0};
